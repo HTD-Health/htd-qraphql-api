@@ -1,0 +1,17 @@
+# .src/schema.graphql
+type Tweet {
+    id: Int!
+    text: String!
+}
+
+type Query {
+    hello: String!
+    helloWithName(name: String!): String!
+    getTweet(id: Int!): Tweet!
+    getTweets: [Tweet]!
+}
+type Mutation {
+    incrementMutation: Int
+    incrementBy(by: Int!): Int!
+    addTweet(text: String!): Tweet!
+}
